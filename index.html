@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 150px;
+            background-color: #f2f6fc;
+        }
+        h1 {
+            color: #34495e;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: white;
+            border: 1px solid #777;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Background Color</h1>
+    <button id="changeBtn">Change Background</button>
+
+    <script>
+        var button = document.getElementById("changeBtn");
+
+        button.addEventListener("click", function() {
+            var color = "#" + Math.floor(Math.random() * 16777215)
+                        .toString(16);
+
+            document.body.style.backgroundColor = color;
+        });
+    </script>
+</body>
+</html>
